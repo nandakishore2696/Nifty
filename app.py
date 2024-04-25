@@ -2,8 +2,6 @@ import pickle
 import numpy as np
 from numpy.linalg import norm
 from tensorflow.keras.preprocessing import image
-import cv2
-from PIL import Image
 from tensorflow.keras.applications.resnet50 import ResNet50, preprocess_input
 from tensorflow.keras.layers import GlobalMaxPooling2D
 from tensorflow.keras import Sequential
