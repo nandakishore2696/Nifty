@@ -8,8 +8,8 @@ from tensorflow.keras import Sequential
 import streamlit as st
 from sklearn.neighbors import NearestNeighbors
 
-feature_list = np.array(pickle.load(open('embeddings.pkl','rb')))
-filenames = pickle.load(open('filenames.pkl','rb'))
+feature_list = np.load('features_list.npy')
+filenames = np.load('filenames.npy')
 
 model = ResNet50(weights='imagenet', include_top=False, input_shape=(224,224,3))
 model.trainable = False
