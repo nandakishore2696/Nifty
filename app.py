@@ -33,7 +33,7 @@ if uploaded_file is not None:
     preds = preds.flatten()
     preds = preds/norm(preds)
 
-    neighnours = NearestNeighbors(n_neighbors=6, algorithm='brute', metric='euclidean')
+    neighnours = NearestNeighbors(n_neighbors=11, algorithm='brute', metric='euclidean')
     neighnours.fit(feature_list)
 
     distances,indices = neighnours.kneighbors([preds])
