@@ -1,4 +1,4 @@
-numpy
-tensorflow 
-scikit-learn
-streamlit
+numpy == 1.26.4
+tensorflow == 2.16.1
+scikit-learn == 1.2.2
+streamlit == 1.28.1
