@@ -186,7 +186,7 @@ elif selected_option == 'Market Sentiment':
             st.write("Daily Pivots - below S3 ", daily_pivot_score)
     else:
         daily_pivot_score = 0
-        st.write("Daily Pivots - Central Pivot Range ","Warming Up")
+        st.write("Daily Pivots - Central Pivot Range ","Warming Up",daily_pivot_score)
 
     if present_price > wtcp:
         if present_price < wr1:
@@ -216,7 +216,7 @@ elif selected_option == 'Market Sentiment':
             st.write("Weekly Pivots - S3 ", weekly_pivot_score)
     else:
         weekly_pivot_score = 0
-        st.write("Weekly Pivots - Central Pivot Range ", "Warming Up")
+        st.write("Weekly Pivots - Central Pivot Range ", "Warming Up", weekly_pivot_score)
 
 
 
