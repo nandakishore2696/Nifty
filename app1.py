@@ -25,13 +25,10 @@ if selected_option == "Charts Suggestion's":
 
     model = Sequential([model, GlobalMaxPooling2D()])
 
-    col1, col2 = st.columns(2)
 
-    with col1:
-        uploaded_file  = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
+    uploaded_file  = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
-    with col2:
-        st.image("history-tends-to-repeat-itself.jpg",width=200)
+    
 
     if uploaded_file is not None:
         img = image.load_img(uploaded_file, target_size=(224,224,3))
