@@ -60,10 +60,9 @@ elif selected_option == 'Market Sentiment':
         headers={'User-Agent':'Mozilla/5.0 (Windows NT 6.3; Win 64 ; x64) Apple WeKit /537.36(KHTML , like Gecko) Chrome/80.0.3987.162 Safari/537.36'} 
         webpage = requests.get(url,headers=headers).text
         soup = BeautifulSoup(webpage, 'lxml')
-        table = soup.find_all('table')[0]
+        table = soup.find_all('table')[1]
         row = table.find_all('tr')[1]
         data_cells = row.find_all('td')
-        #type_value = data_cells[0].text.strip()
         s3 = data_cells[2].text.strip()
         s2 = data_cells[3].text.strip()
         s1 = data_cells[4].text.strip()
@@ -71,7 +70,7 @@ elif selected_option == 'Market Sentiment':
         r1 = data_cells[6].text.strip()
         r2 = data_cells[7].text.strip()
         r3 = data_cells[8].text.strip()
-        table = soup.find_all('table')[1]
+        table = soup.find_all('table')[2]
         row = table.find_all('tr')[1]
         cprdata = []
         for i in row.find_all('td'):
@@ -96,7 +95,7 @@ elif selected_option == 'Market Sentiment':
         headers={'User-Agent':'Mozilla/5.0 (Windows NT 6.3; Win 64 ; x64) Apple WeKit /537.36(KHTML , like Gecko) Chrome/80.0.3987.162 Safari/537.36'} 
         webpage = requests.get(url,headers=headers).text
         soup = BeautifulSoup(webpage, 'lxml')
-        table = soup.find_all('table')[2]
+        table = soup.find_all('table')[3]
         row = table.find_all('tr')[1]
         data_cells = row.find_all('td')
         type_value = data_cells[0].text.strip()
@@ -107,7 +106,7 @@ elif selected_option == 'Market Sentiment':
         wr1 = data_cells[6].text.strip()
         wr2 = data_cells[7].text.strip()
         wr3 = data_cells[8].text.strip()
-        table = soup.find_all('table')[3]
+        table = soup.find_all('table')[4]
         row = table.find_all('tr')[1]
         cprdata = []
         for i in row.find_all('td'):
